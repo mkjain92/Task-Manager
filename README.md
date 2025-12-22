@@ -1,0 +1,174 @@
+# 1. Frontend With React
+1. Create new folder task-manager and in this create two new folder frontend and backend.
+# installation
+
+1. React Install
+
+   1. npm create vite@latest
+   2. project-name: .
+   3. select-framwork: react
+   4. select-varient: javascript
+   5. use-rolldown-vite: no
+   6. install-with-npm-and-start-now: yes
+
+2. clear unwanted files
+   1. app.css
+   2. remove all code app.jsx and create new function using rafce sortcute for functional component  (rafec shortcut is use by ES7+React/Redux/React-Native extension and Tailwind CSS IntelliSense extension is used for Tailwind CSS)
+   3. reamove all css in index.css file
+
+3. setup on git
+   1. create new Repository
+      Task Manager
+      Choose visibility : Public 
+      and click on button create Repository
+   2. create new terminal D:\Larning\mearn-stack-project\task-manager>
+      and run this command 
+      1. git init
+      2. git add . (git add all)
+      
+
+2. use bootstrap CDN
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+   this link and script past in index.html
+
+   by npm
+
+   npm install bootstrap
+   import 'bootstrap/dist/css/bootstrap.min.css';
+   if js require then use this in your pages or component
+   import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
+   - use Window + . (Dot) for Emoji ❤🧡❤💛💚💙💜💥💖💔😁
+
+3. install packages
+   npm install react-router-dom #React Router DOM
+   npm install react-hot-toast #For Toast message and add this in app.jsx import {Toaster} from 'react-hot-toast'
+   npm install react-icons --save # icons in react
+   npm install axios # Axios
+   npm install @reduxjs/toolkit react-redux # Redux Toolkit
+
+   npm install @mui/material @emotion/react @emotion/styled # MUI
+   npm install @mui/icons-material # MUI Icons
+   npm install @mui/x-data-grid # data-grid (MUI)
+   npm install react-bootstrap bootstrap # bootstrap
+   npm install prop-types # prop validation
+   npm install react-hook-form yup # form validation
+   npm install @hookform/resolvers yup # form validation
+   npm install @mui/x-date-pickers dayjs # for date-pickers
+   npm install @mui/x-date-pickers @mui/x-date-pickers-pro dayjs
+   npm install crypto-js # for encryption or decrytion password
+   npm install jwt-decode # for decode token
+
+4. Remove files
+
+   1. remove app.css
+
+# start work
+
+1. we will use functional components in this project. so sortcut command in vscode (rfce)
+
+# 2. Backend With Node
+
+# installation
+
+1. create server folder
+
+   1. create server.js file in this folder
+   2. cd server and run this command
+      "npm init" for node packge.json generate (npm init -y if we use -y then not ask any question)
+   3. edit package.json file and add
+      "type": "module",
+      "author": "MK Jain",
+      "server": "nodemon server.js"
+   4. npm install nodemon //for autorun
+      npm install express // for express js
+      npm install dotenv //Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
+      npm install cors //middleware for CORS
+      npm i colors //get color and style in your node.js console
+      npm i morgan //HTTP request logger middleware for node.js
+      npm install mongoose //for mongodb database
+      npm install bcryptjs //Optimized bcrypt in JavaScript with zero dependencies, with TypeScript support. (for encryption)
+      npm install jsonwebtoken //for token
+      npm install multer //for upload file or image
+
+      //npm install validator //A library of string validators and sanitizers.
+      //npm install body-parser
+      
+
+2. in package.json file remove this form scripts
+   "test": "echo \"Error: no test specified\" && exit 1",
+3. in packge.json file update script section.
+   "scripts": {
+   "start": "nodemon server.js"
+   },
+
+4. add this on top of scripts
+   "type": "module",
+
+# now work on node
+
+1. add code in server.js file
+
+# 3. MongoDB Setup
+
+in this project we are not using cloud mongodb we use work on local mongodb 
+1. dowload Community Edition
+2. dowload Mongodb compas
+
+
+
+
+11. mongodb (atlas) login with google.. and mongodb compass download and install.
+
+12. mongodb(atlas) connect with mongodb compass
+
+    1. Cluster/ click on connect button then show Connect to Cluster0 now click on Compass then
+       Copy the connection string, then open MongoDB Compass
+       Use this connection string in your application
+
+    2. now mongodb comapss click on new Connection or (+) button
+       and now past connection string in URL.
+
+13. if show this error.. cluster0.ocg9koy.mongodb.net 635904:error:10000438:SSL routines:OPENSSL_internal:TLSV1_ALERT_INTERNAL_ERROR:..\..\third_party\boringssl\src\ssl\tls_record.cc:486:SSL alert number 80 " when show this eror then"
+    "curl -4 ifconfig.me" run this command in cmd. then will show ip this ip add in network access.
+14. connect mongodb session
+    npm i --save connect-mongodb-session
+
+15. for using CSRF Token
+    npm i --save csurf
+
+16. for message
+    npm i --save connect-flash
+
+17. send Mail..
+
+    1. for send mail we use thired pairy mail server. SendGrid.
+       i. select free Trial
+       ii. i am login with google (this my code after login: "EG4NYUAAUTYTBY93C714JWEQ")
+       iii. create API key
+       a. go to settings
+       b. click on API Keys
+       c. create API Keys
+       name- node-show
+       access- Full Access
+
+    2. now install this packages
+       npm install --save nodemailer
+       npm install --save nodemailer-sendgrid-transport
+
+18. Validation (server side)
+
+    1. install this package
+       npm install --save express-validator
+
+19. For File Upload..
+
+    1. install this package
+       npm install --save multer
+
+20. for content-security-policy
+    npm install helmet
+
+21. for pdf generate
+    npm install --save pdfkit
