@@ -1,31 +1,79 @@
 # 1. Frontend With React
+
 1. Create new folder task-manager and in this create two new folder frontend and backend.
+
 # installation
 
-1. React Install
+1.  React Install
 
-   1. npm create vite@latest
-   2. project-name: .
-   3. select-framwork: react
-   4. select-varient: javascript
-   5. use-rolldown-vite: no
-   6. install-with-npm-and-start-now: yes
+    1. npm create vite@latest
+    2. project-name: .
+    3. select-framwork: react
+    4. select-varient: javascript
+    5. use-rolldown-vite: no
+    6. install-with-npm-and-start-now: yes
 
-2. clear unwanted files
-   1. app.css
-   2. remove all code app.jsx and create new function using rafce sortcute for functional component  (rafec shortcut is use by ES7+React/Redux/React-Native extension and Tailwind CSS IntelliSense extension is used for Tailwind CSS)
-   3. reamove all css in index.css file
+2.  clear unwanted files
 
-3. setup on git
-   1. create new Repository
-      Task Manager
-      Choose visibility : Public 
-      and click on button create Repository
-   2. create new terminal D:\Larning\mearn-stack-project\task-manager>
-      and run this command 
-      1. git init
-      2. git add . (git add all)
-      
+    1. app.css
+    2. remove all code app.jsx and create new function using rafce sortcute for functional component (rafec shortcut is use by ES7+React/Redux/React-Native extension and Tailwind CSS IntelliSense extension is used for Tailwind CSS)
+    3. reamove all css in index.css file
+
+3.  setup on git
+
+    1. create new Repository
+       Task Manager
+       Choose visibility : Public
+       and click on button create Repository
+    2. create new terminal D:\Larning\mearn-stack-project\task-manager>
+       and run this command
+
+       1. git init
+       2. git add . (git add all)
+       3. git commit -m "frontend initial setup"
+       4. git branch -M main
+          git remote add origin https://github.com/mkjain92/Task-Manager.git
+          git push -u origin main
+
+          …or create a new repository on the command line
+          echo "# Task-Manager" >> README.md
+          git init
+          git add README.md
+          git commit -m "first commit"
+          git branch -M main
+          git remote add origin https://github.com/mkjain92/Task-Manager.git
+          git push -u origin main
+
+          …or push an existing repository from the command line
+          git remote add origin https://github.com/mkjain92/Task-Manager.git
+          git branch -M main
+          git push -u origin main
+
+4.  Tailwind CSS Setup
+
+    1.  Install Tailwind CSS
+        Install tailwindcss and @tailwindcss/vite via npm.
+        npm install tailwindcss @tailwindcss/vite
+
+    2.  Configure the Vite plugin
+        Add the @tailwindcss/vite plugin to your Vite configuration.
+
+        import { defineConfig } from 'vite'
+        import tailwindcss from '@tailwindcss/vite'
+
+        export default defineConfig({
+        plugins: [
+           tailwindcss(),
+        ],
+       })
+
+    3. Import Tailwind CSS (in index.css file)
+       Add an @import to your CSS file that imports Tailwind CSS.
+       @import "tailwindcss";
+
+5. using google fonts poppins..
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+add this in index.css
 
 2. use bootstrap CDN
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -94,7 +142,6 @@
 
       //npm install validator //A library of string validators and sanitizers.
       //npm install body-parser
-      
 
 2. in package.json file remove this form scripts
    "test": "echo \"Error: no test specified\" && exit 1",
@@ -112,63 +159,61 @@
 
 # 3. MongoDB Setup
 
-in this project we are not using cloud mongodb we use work on local mongodb 
+in this project we are not using cloud mongodb we use work on local mongodb
+
 1. dowload Community Edition
 2. dowload Mongodb compas
 
+3. mongodb (atlas) login with google.. and mongodb compass download and install.
 
+4. mongodb(atlas) connect with mongodb compass
 
+   1. Cluster/ click on connect button then show Connect to Cluster0 now click on Compass then
+      Copy the connection string, then open MongoDB Compass
+      Use this connection string in your application
 
-11. mongodb (atlas) login with google.. and mongodb compass download and install.
+   2. now mongodb comapss click on new Connection or (+) button
+      and now past connection string in URL.
 
-12. mongodb(atlas) connect with mongodb compass
+5. if show this error.. cluster0.ocg9koy.mongodb.net 635904:error:10000438:SSL routines:OPENSSL_internal:TLSV1_ALERT_INTERNAL_ERROR:..\..\third_party\boringssl\src\ssl\tls_record.cc:486:SSL alert number 80 " when show this eror then"
+   "curl -4 ifconfig.me" run this command in cmd. then will show ip this ip add in network access.
+6. connect mongodb session
+   npm i --save connect-mongodb-session
 
-    1. Cluster/ click on connect button then show Connect to Cluster0 now click on Compass then
-       Copy the connection string, then open MongoDB Compass
-       Use this connection string in your application
+7. for using CSRF Token
+   npm i --save csurf
 
-    2. now mongodb comapss click on new Connection or (+) button
-       and now past connection string in URL.
+8. for message
+   npm i --save connect-flash
 
-13. if show this error.. cluster0.ocg9koy.mongodb.net 635904:error:10000438:SSL routines:OPENSSL_internal:TLSV1_ALERT_INTERNAL_ERROR:..\..\third_party\boringssl\src\ssl\tls_record.cc:486:SSL alert number 80 " when show this eror then"
-    "curl -4 ifconfig.me" run this command in cmd. then will show ip this ip add in network access.
-14. connect mongodb session
-    npm i --save connect-mongodb-session
+9. send Mail..
 
-15. for using CSRF Token
-    npm i --save csurf
+   1. for send mail we use thired pairy mail server. SendGrid.
+      i. select free Trial
+      ii. i am login with google (this my code after login: "EG4NYUAAUTYTBY93C714JWEQ")
+      iii. create API key
+      a. go to settings
+      b. click on API Keys
+      c. create API Keys
+      name- node-show
+      access- Full Access
 
-16. for message
-    npm i --save connect-flash
+   2. now install this packages
+      npm install --save nodemailer
+      npm install --save nodemailer-sendgrid-transport
 
-17. send Mail..
-
-    1. for send mail we use thired pairy mail server. SendGrid.
-       i. select free Trial
-       ii. i am login with google (this my code after login: "EG4NYUAAUTYTBY93C714JWEQ")
-       iii. create API key
-       a. go to settings
-       b. click on API Keys
-       c. create API Keys
-       name- node-show
-       access- Full Access
-
-    2. now install this packages
-       npm install --save nodemailer
-       npm install --save nodemailer-sendgrid-transport
-
-18. Validation (server side)
+10. Validation (server side)
 
     1. install this package
        npm install --save express-validator
 
-19. For File Upload..
+11. For File Upload..
 
     1. install this package
        npm install --save multer
 
-20. for content-security-policy
+12. for content-security-policy
     npm install helmet
 
-21. for pdf generate
+13. for pdf generate
     npm install --save pdfkit
