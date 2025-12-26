@@ -75,22 +75,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 add this in index.css
 
-2. use bootstrap CDN
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-   this link and script past in index.html
+- use Window + . (Dot) for Emoji ❤🧡❤💛💚💙💜💥💖💔😁
 
-   by npm
+6. Routing
+npm install react-router-dom #React Router DOM
 
-   npm install bootstrap
-   import 'bootstrap/dist/css/bootstrap.min.css';
-   if js require then use this in your pages or component
-   import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
-   - use Window + . (Dot) for Emoji ❤🧡❤💛💚💙💜💥💖💔😁
 
 3. install packages
-   npm install react-router-dom #React Router DOM
    npm install react-hot-toast #For Toast message and add this in app.jsx import {Toaster} from 'react-hot-toast'
    npm install react-icons --save # icons in react
    npm install axios # Axios
@@ -108,19 +99,12 @@ add this in index.css
    npm install crypto-js # for encryption or decrytion password
    npm install jwt-decode # for decode token
 
-4. Remove files
-
-   1. remove app.css
-
-# start work
-
-1. we will use functional components in this project. so sortcut command in vscode (rfce)
 
 # 2. Backend With Node
 
 # installation
 
-1. create server folder
+1. create ba folder
 
    1. create server.js file in this folder
    2. cd server and run this command
