@@ -117,8 +117,8 @@ npm install react-router-dom #React Router DOM
    4. copy .gitignore file from front folder and past this file in backend folder   
    5. npm install express // for express js
       npm install --save-dev nodemon //for autorun
-      npm install dotenv //Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
       npm install cors //middleware for CORS
+      npm install dotenv //Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
       npm i colors //get color and style in your node.js console
       npm i morgan //HTTP request logger middleware for node.js
       npm install mongoose //for mongodb database
