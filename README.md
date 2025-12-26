@@ -104,17 +104,19 @@ npm install react-router-dom #React Router DOM
 
 # installation
 
-1. create ba folder
-
-   1. create server.js file in this folder
-   2. cd server and run this command
+1. create backend folder
+   1. cd backend and run this command
       "npm init" for node packge.json generate (npm init -y if we use -y then not ask any question)
+   2. create index.js file in this folder
    3. edit package.json file and add
       "type": "module",
       "author": "MK Jain",
-      "server": "nodemon server.js"
-   4. npm install nodemon //for autorun
-      npm install express // for express js
+      "test": "echo \"Error: no test specified\" && exit 1" remove this from scripts and type
+      "start": "node index.js",
+      "dev": "nodemon index.js"
+   4. copy .gitignore file from front folder and past this file in backend folder   
+   5. npm install express // for express js
+      npm install --save-dev nodemon //for autorun
       npm install dotenv //Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
       npm install cors //middleware for CORS
       npm i colors //get color and style in your node.js console
