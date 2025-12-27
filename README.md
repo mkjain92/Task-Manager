@@ -105,43 +105,38 @@ npm install react-router-dom #React Router DOM
 # installation
 
 1. create backend folder
-   1. cd backend and run this command
-      "npm init" for node packge.json generate (npm init -y if we use -y then not ask any question)
-   2. create index.js file in this folder
-   3. edit package.json file and add
-      "type": "module",
-      "author": "MK Jain",
-      "test": "echo \"Error: no test specified\" && exit 1" remove this from scripts and type
+2. cd backend and run this command
+   "npm init" for node packge.json generate (npm init -y if we use -y then not ask any question)
+3. create index.js file in this folder
+4. in package.json file remove this form scripts
+   "test": "echo \"Error: no test specified\" && exit 1",
+5. in packge.json file update script section.
+   "scripts": {
       "start": "node index.js",
       "dev": "nodemon index.js"
-   4. copy .gitignore file from front folder and past this file in backend folder   
-   5. npm install express // for express js
-      npm install --save-dev nodemon //for autorun
-      npm install cors //middleware for CORS
-      npm install dotenv //Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
-      npm i colors //get color and style in your node.js console
-      npm i morgan //HTTP request logger middleware for node.js
-      npm install mongoose //for mongodb database
-      npm install bcryptjs //Optimized bcrypt in JavaScript with zero dependencies, with TypeScript support. (for encryption)
-      npm install jsonwebtoken //for token
-      npm install multer //for upload file or image
-
-      //npm install validator //A library of string validators and sanitizers.
-      //npm install body-parser
-
-2. in package.json file remove this form scripts
-   "test": "echo \"Error: no test specified\" && exit 1",
-3. in packge.json file update script section.
-   "scripts": {
-   "start": "nodemon server.js"
    },
+6. edit package.json file and add
+      "type": "module",
+      "author": "MK Jain",
+7. copy .gitignore file from front folder and past this file in backend folder   
+8. npm install express // for express js
+   npm install --save-dev nodemon //for autorun
+   npm install cors //middleware for CORS
+   npm install dotenv //Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env
 
-4. add this on top of scripts
-   "type": "module",
+   
+   npm install bcryptjs //Optimized bcrypt in JavaScript with zero dependencies, with TypeScript support. (for encryption)
+   npm install jsonwebtoken //for token
+   npm install multer //for upload file or image
+
+   //npm i colors //get color and style in your node.js console
+   //npm i morgan //HTTP request logger middleware for node.js
+   //npm install validator //A library of string validators and sanitizers.
+   //npm install body-parser
 
 # now work on node
 
-1. add code in server.js file
+1. add code in index.js file
 
 # 3. MongoDB Setup
 
@@ -149,57 +144,7 @@ in this project we are not using cloud mongodb we use work on local mongodb
 
 1. dowload Community Edition
 2. dowload Mongodb compas
+3. add this in .env file
+   MONGO_URI = mongodb://localhost:27017/task-manager
+4. npm install mongoose //for mongodb database
 
-3. mongodb (atlas) login with google.. and mongodb compass download and install.
-
-4. mongodb(atlas) connect with mongodb compass
-
-   1. Cluster/ click on connect button then show Connect to Cluster0 now click on Compass then
-      Copy the connection string, then open MongoDB Compass
-      Use this connection string in your application
-
-   2. now mongodb comapss click on new Connection or (+) button
-      and now past connection string in URL.
-
-5. if show this error.. cluster0.ocg9koy.mongodb.net 635904:error:10000438:SSL routines:OPENSSL_internal:TLSV1_ALERT_INTERNAL_ERROR:..\..\third_party\boringssl\src\ssl\tls_record.cc:486:SSL alert number 80 " when show this eror then"
-   "curl -4 ifconfig.me" run this command in cmd. then will show ip this ip add in network access.
-6. connect mongodb session
-   npm i --save connect-mongodb-session
-
-7. for using CSRF Token
-   npm i --save csurf
-
-8. for message
-   npm i --save connect-flash
-
-9. send Mail..
-
-   1. for send mail we use thired pairy mail server. SendGrid.
-      i. select free Trial
-      ii. i am login with google (this my code after login: "EG4NYUAAUTYTBY93C714JWEQ")
-      iii. create API key
-      a. go to settings
-      b. click on API Keys
-      c. create API Keys
-      name- node-show
-      access- Full Access
-
-   2. now install this packages
-      npm install --save nodemailer
-      npm install --save nodemailer-sendgrid-transport
-
-10. Validation (server side)
-
-    1. install this package
-       npm install --save express-validator
-
-11. For File Upload..
-
-    1. install this package
-       npm install --save multer
-
-12. for content-security-policy
-    npm install helmet
-
-13. for pdf generate
-    npm install --save pdfkit
