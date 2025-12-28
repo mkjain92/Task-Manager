@@ -3,6 +3,8 @@ import cors from "cors"
 import dotenv from "dotenv"
 import mongoose from "mongoose"
 
+import authRoutes from "./routes/auth.routes.js"
+
 dotenv.config();
 
 mongoose.connect(process.env.MONGO_URI).then(()=>{
@@ -25,6 +27,10 @@ app.use(
 
 //Middleware to handle JSON object in req body
 app.use(express.json());
+
+//Router
+app.use("/api/auth", authRoutes)
+
 
 app.listen(3000, ()=> {
     console.log("Serve is running on port 3000!");
