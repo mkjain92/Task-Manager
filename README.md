@@ -126,7 +126,6 @@ npm install react-router-dom #React Router DOM
    npm install bcryptjs //Optimized bcrypt in JavaScript with zero dependencies, with TypeScript support. (for encryption)
    npm install jsonwebtoken //for token
    npm i cookie-parser //for cookie-parser. 
-
    npm install multer //for upload file or image
 
    //npm i colors //get color and style in your node.js console
