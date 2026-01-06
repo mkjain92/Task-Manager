@@ -6,6 +6,7 @@ import cookieParser from "cookie-parser"
 
 import authRoutes from "./routes/auth.routes.js"
 import userRoutes from "./routes/user.routes.js"
+import taskRoutes from "./routes/task.routes.js"
 
 dotenv.config();
 
@@ -35,6 +36,7 @@ app.use(cookieParser());
 //Router
 app.use("/api/auth", authRoutes)
 app.use("/api/users", userRoutes)
+app.use("/api/tasks", taskRoutes)
 
 app.listen(3000, ()=> {
     console.log("Serve is running on port 3000!");
