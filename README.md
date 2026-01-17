@@ -127,6 +127,7 @@ npm install react-router-dom #React Router DOM
    npm install jsonwebtoken //for token
    npm i cookie-parser //for cookie-parser. 
    npm install multer //for upload file or image
+   npm i exceljs //for excel file report generate 
 
    //npm i colors //get color and style in your node.js console
    //npm i morgan //HTTP request logger middleware for node.js
